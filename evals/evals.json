@@ -1,0 +1,23 @@
+{
+  "skill_name": "binary-forge",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "my brother sent me this file called updater.exe and my antivirus flagged it but he says its fine, can u check if its actually malware? its at ./samples/updater.exe",
+      "expected_output": "Runs triage.py on the file, produces a scored verdict with verbatim indicator evidence, extracts IOCs, generates a compile-noted YARA rule, and delivers a structured report using the malware report template — without interrogating the user about permissions.",
+      "files": ["samples/updater.exe"]
+    },
+    {
+      "id": 2,
+      "prompt": "i made a windows game in unity last year and i want it on android, how do i get it there? the project folder is at ./mygame",
+      "expected_output": "Inspects the project with port_plan.py --inspect, detects Unity from file signatures, generates the win→android port plan (engine-recompile strategy, IL2CPP/ARM64, input remap, ASTC phases), explains the trade-offs, and offers to execute the platform switch steps.",
+      "files": ["mygame/"]
+    },
+    {
+      "id": 3,
+      "prompt": "scan everything in this downloads folder for malware before i open any of it",
+      "expected_output": "Runs triage.py in folder mode, ranks all files by score, summarizes top findings with one-line indicator summaries, states plainly that the clean majority showed no static indicators, and gives ranked remediation actions per the batch triage template.",
+      "files": ["downloads/"]
+    }
+  ]
+}

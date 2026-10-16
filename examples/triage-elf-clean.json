@@ -1,0 +1,279 @@
+{
+  "file": "/bin/true",
+  "size": 43432,
+  "sha256": "b381cc8c55ec524b9fa92897f0882e855357468b4a763519cec47e05994d61ff",
+  "md5": "66acace16b60706c2dabba47a75cd06a",
+  "sha1": "ebdd4e04a1e16de7d92e52b9ee25eeaa988c92bd",
+  "format": "elf",
+  "elf": {
+    "type": "ELF",
+    "class": "64",
+    "endian": "LE",
+    "machine": "x86_64",
+    "elf_type": "DYN(PIE)",
+    "entry": "0x27e0",
+    "sections": [
+      {
+        "name": "\u0000.shstrtab\u0000.note.gnu.pro",
+        "size": 0,
+        "offset": 0,
+        "entropy": null
+      },
+      {
+        "name": ".note.gnu.property",
+        "size": 32,
+        "offset": 848,
+        "entropy": 2.055
+      },
+      {
+        "name": ".note.gnu.build-id",
+        "size": 36,
+        "offset": 880,
+        "entropy": 4.247
+      },
+      {
+        "name": ".interp",
+        "size": 28,
+        "offset": 916,
+        "entropy": 3.941
+      },
+      {
+        "name": ".gnu.hash",
+        "size": 92,
+        "offset": 944,
+        "entropy": 5.063
+      },
+      {
+        "name": ".dynsym",
+        "size": 1464,
+        "offset": 1040,
+        "entropy": 1.25
+      },
+      {
+        "name": ".dynstr",
+        "size": 791,
+        "offset": 2504,
+        "entropy": 4.654
+      },
+      {
+        "name": ".gnu.version",
+        "size": 122,
+        "offset": 3296,
+        "entropy": 1.7
+      },
+      {
+        "name": ".gnu.version_r",
+        "size": 128,
+        "offset": 3424,
+        "entropy": 3.059
+      },
+      {
+        "name": ".rela.dyn",
+        "size": 744,
+        "offset": 3552,
+        "entropy": 1.656
+      },
+      {
+        "name": ".rela.plt",
+        "size": 1056,
+        "offset": 4296,
+        "entropy": 1.435
+      },
+      {
+        "name": ".init",
+        "size": 23,
+        "offset": 8192,
+        "entropy": 3.915
+      },
+      {
+        "name": ".plt",
+        "size": 720,
+        "offset": 8224,
+        "entropy": 3.898
+      },
+      {
+        "name": ".plt.got",
+        "size": 8,
+        "offset": 8944,
+        "entropy": 2.75
+      },
+      {
+        "name": ".text",
+        "size": 17118,
+        "offset": 8960,
+        "entropy": 6.21
+      },
+      {
+        "name": ".fini",
+        "size": 9,
+        "offset": 26080,
+        "entropy": 2.503
+      },
+      {
+        "name": ".rodata",
+        "size": 2895,
+        "offset": 28672,
+        "entropy": 5.293
+      },
+      {
+        "name": ".eh_frame_hdr",
+        "size": 868,
+        "offset": 31568,
+        "entropy": 4.629
+      },
+      {
+        "name": ".eh_frame",
+        "size": 3904,
+        "offset": 32440,
+        "entropy": 4.768
+      },
+      {
+        "name": ".note.ABI-tag",
+        "size": 32,
+        "offset": 36344,
+        "entropy": 1.561
+      },
+      {
+        "name": ".init_array",
+        "size": 8,
+        "offset": 39856,
+        "entropy": 1.061
+      },
+      {
+        "name": ".fini_array",
+        "size": 8,
+        "offset": 39864,
+        "entropy": 1.061
+      },
+      {
+        "name": ".data.rel.ro",
+        "size": 152,
+        "offset": 39872,
+        "entropy": 1.478
+      },
+      {
+        "name": ".dynamic",
+        "size": 496,
+        "offset": 40024,
+        "entropy": 1.521
+      },
+      {
+        "name": ".got",
+        "size": 416,
+        "offset": 40520,
+        "entropy": 1.591
+      },
+      {
+        "name": ".data",
+        "size": 128,
+        "offset": 40960,
+        "entropy": 0.636
+      },
+      {
+        "name": ".bss",
+        "size": 448,
+        "offset": 41088,
+        "entropy": 4.84
+      },
+      {
+        "name": ".gnu_debugaltlink",
+        "size": 73,
+        "offset": 41088,
+        "entropy": 5.117
+      },
+      {
+        "name": ".gnu_debuglink",
+        "size": 52,
+        "offset": 41164,
+        "entropy": 4.064
+      },
+      {
+        "name": ".shstrtab",
+        "size": 294,
+        "offset": 41216,
+        "entropy": 4.298
+      }
+    ],
+    "imports": [
+      "\u0000nl_langinfo\u0000error_message_count",
+      "free",
+      "__vfprintf_chk",
+      "__libc_start_main",
+      "abort",
+      "__errno_location",
+      "strncmp",
+      "_ITM_deregisterTMCloneTable",
+      "_exit",
+      "__fpending",
+      "fcntl",
+      "textdomain",
+      "fclose",
+      "bindtextdomain",
+      "dcgettext",
+      "__ctype_get_mb_cur_max",
+      "strlen",
+      "__stack_chk_fail",
+      "__overflow",
+      "strrchr",
+      "lseek",
+      "memset",
+      "mbrtoc32",
+      "memcmp",
+      "fputs_unlocked",
+      "calloc",
+      "strcmp",
+      "fputc_unlocked",
+      "__gmon_start__",
+      "memcpy",
+      "fileno",
+      "strerror_r",
+      "malloc",
+      "fflush",
+      "nl_langinfo",
+      "__freading",
+      "realloc",
+      "setlocale",
+      "__printf_chk",
+      "fseeko",
+      "__cxa_atexit",
+      "exit",
+      "fwrite",
+      "__fprintf_chk",
+      "_ITM_registerTMCloneTable",
+      "fflush_unlocked",
+      "mbsinit",
+      "iswprint",
+      "__ctype_b_loc",
+      "__cxa_finalize"
+    ],
+    "static": false,
+    "stripped": true
+  },
+  "string_count": 244,
+  "string_categories": {
+    "net-url": {
+      "label": "network URL",
+      "points": 1,
+      "hits": [
+        "https://www.gnu.org/gethelp/",
+        "https://www.gnu.org/software/coreutils/",
+        "https://translationproject.org/team/",
+        "https://gnu.org/licenses/gpl.html"
+      ]
+    }
+  },
+  "score": 1,
+  "verdict": "no-static-indicators",
+  "indicators": [
+    {
+      "id": "str:net-url",
+      "points": 1,
+      "evidence": [
+        "https://www.gnu.org/gethelp/",
+        "https://www.gnu.org/software/coreutils/",
+        "https://translationproject.org/team/",
+        "https://gnu.org/licenses/gpl.html"
+      ]
+    }
+  ]
+}

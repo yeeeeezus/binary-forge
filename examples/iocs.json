@@ -1,0 +1,74 @@
+{
+  "generated": "2026-10-16T23:25:57.878331+00:00",
+  "sample": {
+    "file": "/tmp/fixture.exe",
+    "sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+    "verdict": "likely-malicious"
+  },
+  "indicators": [
+    {
+      "type": "domain-name",
+      "value": "c2.example.invalid",
+      "context": "observed in net-url URL: http://c2.example.invalid/payload2.bin",
+      "confidence": "medium",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    },
+    {
+      "type": "url",
+      "value": "http://c2.example.invalid/payload2.bin",
+      "context": "string category: net-url (network URL)",
+      "confidence": "medium",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    },
+    {
+      "type": "shell-command",
+      "value": "cmd.exe",
+      "context": "string category: shell (shell invocation)",
+      "confidence": "high",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    },
+    {
+      "type": "shell-command",
+      "value": "powershell",
+      "context": "string category: shell (shell invocation)",
+      "confidence": "high",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    },
+    {
+      "type": "encoded-command",
+      "value": "powershell -enc",
+      "context": "string category: ps-encoded (encoded PowerShell)",
+      "confidence": "high",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    },
+    {
+      "type": "registry-run-key",
+      "value": "CurrentVersion\\Run",
+      "context": "string category: persistence (persistence mechanism)",
+      "confidence": "high",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    },
+    {
+      "type": "windows-api",
+      "value": "VirtualAlloc",
+      "context": "string category: injection (process-injection API)",
+      "confidence": "high",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    },
+    {
+      "type": "file-hash-sha256",
+      "value": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "context": "analyzed sample",
+      "confidence": "fact",
+      "source_sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+      "observed": "2026-10-16T23:25:57.878096+00:00"
+    }
+  ]
+}

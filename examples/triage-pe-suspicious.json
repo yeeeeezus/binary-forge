@@ -1,0 +1,185 @@
+{
+  "file": "/tmp/fixture.exe",
+  "size": 2048,
+  "sha256": "1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99",
+  "md5": "40c80f9c60496e8e1c640351d7b84601",
+  "sha1": "bb6e2e291447c70b48d439e67e6280564051433f",
+  "format": "pe",
+  "pe": {
+    "type": "PE",
+    "machine": "x86",
+    "compiled": "2019-07-06T01:57:20Z",
+    "magic": "PE32",
+    "subsystem": "console",
+    "sections": [
+      {
+        "name": ".text",
+        "vsize": 512,
+        "vaddr": 4096,
+        "rawsize": 512,
+        "rawptr": 512,
+        "entropy": 0.0
+      },
+      {
+        "name": ".rdata",
+        "vsize": 512,
+        "vaddr": 8192,
+        "rawsize": 512,
+        "rawptr": 1024,
+        "entropy": 4.466
+      },
+      {
+        "name": ".data",
+        "vsize": 512,
+        "vaddr": 12288,
+        "rawsize": 512,
+        "rawptr": 1536,
+        "entropy": 1.416
+      }
+    ],
+    "entry_rva": "0x1000",
+    "entry_section": {
+      "index": 0,
+      "name": ".text"
+    },
+    "imports": {
+      "kernel32.dll": [
+        "LoadLibraryA",
+        "GetProcAddress",
+        "VirtualAlloc",
+        "CreateFileA",
+        "WinExec"
+      ]
+    },
+    "dotnet": false,
+    "signed_dir": false,
+    "has_resources": false
+  },
+  "string_count": 17,
+  "string_categories": {
+    "net-url": {
+      "label": "network URL",
+      "points": 1,
+      "hits": [
+        "http://c2.example.invalid/payload2.bin"
+      ]
+    },
+    "shell": {
+      "label": "shell invocation",
+      "points": 3,
+      "hits": [
+        "cmd.exe",
+        "powershell"
+      ]
+    },
+    "ps-encoded": {
+      "label": "encoded PowerShell",
+      "points": 4,
+      "hits": [
+        "powershell -enc"
+      ]
+    },
+    "persistence": {
+      "label": "persistence mechanism",
+      "points": 3,
+      "hits": [
+        "CurrentVersion\\Run"
+      ]
+    },
+    "injection": {
+      "label": "process-injection API",
+      "points": 2,
+      "hits": [
+        "VirtualAlloc"
+      ]
+    },
+    "anti-debug": {
+      "label": "anti-debug check",
+      "points": 2,
+      "hits": [
+        "IsDebuggerPresent"
+      ]
+    },
+    "vm-check": {
+      "label": "VM/sandbox check",
+      "points": 1,
+      "hits": [
+        "vmware",
+        "vbox",
+        "qemu"
+      ]
+    }
+  },
+  "score": 21,
+  "verdict": "likely-malicious",
+  "indicators": [
+    {
+      "id": "skeleton-imports",
+      "points": 2,
+      "evidence": [
+        "5 imports, only kernel32: LoadLibraryA, GetProcAddress, VirtualAlloc, CreateFileA, WinExec"
+      ]
+    },
+    {
+      "id": "dynamic-resolver-combo",
+      "points": 3,
+      "evidence": [
+        "GetProcAddress",
+        "LoadLibraryA",
+        "VirtualAlloc"
+      ]
+    },
+    {
+      "id": "str:net-url",
+      "points": 1,
+      "evidence": [
+        "http://c2.example.invalid/payload2.bin"
+      ]
+    },
+    {
+      "id": "str:shell",
+      "points": 3,
+      "evidence": [
+        "cmd.exe",
+        "powershell"
+      ]
+    },
+    {
+      "id": "str:ps-encoded",
+      "points": 4,
+      "evidence": [
+        "powershell -enc"
+      ]
+    },
+    {
+      "id": "str:persistence",
+      "points": 3,
+      "evidence": [
+        "CurrentVersion\\Run"
+      ]
+    },
+    {
+      "id": "str:injection",
+      "points": 2,
+      "evidence": [
+        "VirtualAlloc"
+      ]
+    },
+    {
+      "id": "str:anti-debug",
+      "points": 2,
+      "evidence": [
+        "IsDebuggerPresent"
+      ]
+    },
+    {
+      "id": "str:vm-check",
+      "points": 1,
+      "evidence": [
+        "vmware",
+        "vbox",
+        "qemu"
+      ]
+    }
+  ]
+}

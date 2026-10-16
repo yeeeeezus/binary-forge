@@ -1,0 +1,9 @@
+type,value,context,confidence,source_sha256,observed_utc
+domain-name,c2.example.invalid,observed in net-url URL: http://c2.example.invalid/payload2.bin,medium,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
+url,http://c2.example.invalid/payload2.bin,string category: net-url (network URL),medium,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
+shell-command,cmd.exe,string category: shell (shell invocation),high,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
+shell-command,powershell,string category: shell (shell invocation),high,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
+encoded-command,powershell -enc,string category: ps-encoded (encoded PowerShell),high,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
+registry-run-key,CurrentVersion\Run,string category: persistence (persistence mechanism),high,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
+windows-api,VirtualAlloc,string category: injection (process-injection API),high,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
+file-hash-sha256,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,analyzed sample,fact,1006af1e1d35e9cf80484bc760b5d3514a87206b93bd0abbccf92ba9bdac8b99,2026-10-16T23:25:57.878096+00:00
