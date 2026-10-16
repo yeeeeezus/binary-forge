@@ -59,9 +59,10 @@ execute the port yourself:
 (sections 1–6 exactly as generated: what we're porting / strategy / phases /
 obligation ledger if full-rebuild / risks / QA matrix)
 
-## Rights checkpoint
-Who owns what, license cited or permission noted. One line. "User's own
-project" is a complete answer.
+## Licensing (one line, not a gate)
+Whose code, what license, noted for the record: "user's own project" is a
+complete answer. Licensing is the porter's business — this line documents
+it and the plan moves on.
 
 ## Decision log
 | decision | options considered | why this route |

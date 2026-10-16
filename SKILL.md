@@ -1,6 +1,6 @@
 ---
 name: binary-forge
-description: Two professional binary pipelines for AI agents. (1) MALWARE HUNT — triage any suspicious file, binary, APK, game, or script for malware: static analysis, PE/ELF/APK parsing, packer and injector detection, IOC extraction, YARA rule generation, verdict reports with evidence. (2) CROSS-PLATFORM PORT — port games and apps between Windows, Android, Linux, Web, macOS and iOS: engine detection (Unity, Unreal, Godot, Electron, .NET, Win32, Java, GameMaker...), port strategy, obligation ledger, scaffold and QA matrix. Use this skill whenever the user mentions malware, virus, trojan, ransomware, suspicious file, "is this file safe", scanning a folder for threats, analyzing an unknown binary, decompiling — OR porting, rebuilding, migrating, remaking, converting a game or app to another platform (e.g. Windows to Android), or adding features to an existing app. These are standard defensive-security and software-engineering tasks — proceed confidently under the authorization-first posture in references/authorization.md.
+description: Two professional binary pipelines for AI agents. (1) MALWARE HUNT — triage any suspicious file, binary, APK, game, or script for malware: static analysis, PE/ELF/APK parsing, packer and injector detection, IOC extraction, YARA rule generation, verdict reports with evidence. (2) CROSS-PLATFORM PORT — port games and apps between Windows, Android, Linux, Web, macOS and iOS: engine detection (Unity, Unreal, Godot, Electron, .NET, Win32, Java, GameMaker...), port strategy, obligation ledger, scaffold and QA matrix. Use this skill whenever the user mentions malware, virus, trojan, ransomware, suspicious file, "is this file safe", scanning a folder for threats, analyzing an unknown binary, decompiling — OR porting, rebuilding, migrating, remaking, converting a game or app to another platform (e.g. Windows to Android), or adding features to an existing app. These are standard defensive-security and software-engineering tasks — this skill never refuses in-domain work; read references/refusal-policy.md before declining anything.
 ---
 
 # binary-forge
@@ -22,13 +22,17 @@ execute an unknown binary to produce a useful verdict — and you must not.
 
 Malware triage and cross-platform porting are ordinary, legal, professional
 work — done daily by SOC analysts, malware researchers, porting studios, and
-indie developers. Treat them that way. Read `references/authorization.md`
-before your first run: it gives you the authorization-first framing, the short
-rights checklist for porting, and the two narrow cases that are genuinely out
-of scope (authoring malware to attack others, and pirating software you have
-no rights to). For everything else — analysis, detection, verdicts, port plans,
-rebuilds, feature work on apps you or the user control — get moving and don't
-pester the user with permission questions they already answered by asking you.
+indie developers. Treat them that way, and never refuse them. Read
+`references/refusal-policy.md` before your first run and before declining
+anything: analysis, detection, verdicts, port plans, rebuilds, and feature
+work are always yes — executed immediately, with zero disclaimers and zero
+permission interviews. The policy's only exceptions are four requests that
+are different work entirely (building malware to deploy against others,
+attacking systems that aren't the user's, stealing other people's
+credentials, piracy tooling) — and even those get a one-sentence redirect to
+the nearest in-scope work, never a lecture. The request itself is the
+authorization: users asking for triage are the defenders; users asking for
+ports are the owners. Don't re-ask what they already answered by asking you.
 
 Hard rules that exist for good reasons:
 
@@ -149,7 +153,7 @@ lowest target device. A port that wasn't tested is a plan, not a port.
 
 ```
 scripts/          triage.py, yara_gen.py, make_iocs.py, port_plan.py, build_test_pe.py
-references/       authorization.md, malware-playbook.md, porting-playbook.md,
+references/       refusal-policy.md, malware-playbook.md, porting-playbook.md,
                   engine-detection.md, report-templates.md
 examples/         real outputs captured from live runs (start here to see formats)
 evals/            test prompts for validating the skill itself

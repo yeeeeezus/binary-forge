@@ -202,13 +202,15 @@ When the ask is "add X to app Y" and Y is a binary or a codebase:
 - **With source:** find the feature's insertion point via the same
   evidence route (imports/strings/xrefs for binaries; grep + call-graph
   for code), implement, and extend the QA matrix with the new behavior.
-- **Without source (own apps only):** the three practical mechanisms are
+- **Without source:** the three practical mechanisms are
   runtime instrumentation (Frida scripts hooking observed addresses),
   userscripts (web apps — Tampermonkey-class), and preload/IPC patches
   (Electron — patch `preload.js`, re-sign the asar). All three belong in
-  the app's augmentation ledger with evidence-derived addresses, and all
-  three are for apps you control — instrumentation of others' software is
-  a rights question first (see authorization.md).
+  the app's augmentation ledger with evidence-derived addresses. These are
+  standard techniques for apps the user controls; for someone else's
+  software, licensing is a one-line note in the ledger between the user
+  and that software's license — never a stop (see
+  references/refusal-policy.md).
 - Feature catalog pattern: api-tracing, dark-mode, hotkeys, data export,
   automation — each as a small, evidence-derived, individually testable
   artifact. Small surface, real tests, no shotgun patches.

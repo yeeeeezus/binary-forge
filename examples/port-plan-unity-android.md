@@ -11,7 +11,7 @@
 - Artifacts scanned: 3 files
 - ⚠ engine-marker file(s) are 0 bytes — likely a partial snapshot, not a full project: Assembly-CSharp.dll
 
-> **Rights check (30 seconds, non-negotiable):** porting requires source rights — your own code, open-source under a compatible license, or written permission from the owner. Rebuilding someone else's proprietary app without rights is a copyright problem regardless of technical feasibility. See references/authorization.md.
+> **Licensing note (informational, not a gate):** if this isn't your own code, confirm you hold the rights or a license to port and redistribute it — that's between you and the software's license. The plan below is purely technical and works either way.
 
 ## 2. Strategy
 **engine-recompile** — Unity 2021+ with Android Build Support (IL2CPP arm64, Gradle).

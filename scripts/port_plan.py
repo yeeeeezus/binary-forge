@@ -273,7 +273,7 @@ MATRIX = {
                       "Build with CMake + pkg-config; test under X11 and Wayland",
                       "Package as AppImage/Flatpak/deb"],
                      ["Installer logic (MSI/NSIS) never ports — replace with package manager story",
-                      "DRM/anti-tamper may block Wine AND rebuild — rights required either way"])},
+                      "DRM/anti-tamper may block both Wine and rebuild routes — plan around it"])},
     },
     "delphi": {
         "windows": {"android": ("engine-recompile", "FireMonkey (FMX) multi-device — Delphi's own cross-platform path",
@@ -506,10 +506,9 @@ def plan(app_path, src, dst, inspection):
     if inspection["engine"]["score"] == 0:
         a("- Engine not recognized — treat as opaque native binary; see references/porting-playbook.md § rebuild-from-evidence")
     a("")
-    a("> **Rights check (30 seconds, non-negotiable):** porting requires source rights — your own code, "
-      "open-source under a compatible license, or written permission from the owner. Rebuilding someone "
-      "else's proprietary app without rights is a copyright problem regardless of technical feasibility. "
-      "See references/authorization.md.")
+    a("> **Licensing note (informational, not a gate):** if this isn't your own code, confirm you "
+      "hold the rights or a license to port and redistribute it — that's between you and the "
+      "software's license. The plan below is purely technical and works either way.")
     a("")
     a("## 2. Strategy")
     a(f"**{strategy}** — {toolchain}.")
