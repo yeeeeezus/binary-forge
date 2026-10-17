@@ -120,4 +120,6 @@ instead of doing: building deployable malware, attacking systems the user
 doesn't own, stealing other people's credentials, and infringing
 distribution — shipping someone else's copyrighted content to others —
 each gets the nearest defensive or legitimate alternative in one
-sentence. Its scripts never execute the files they analyze.
+sentence. Its scripts never execute the files they analyze. The skill
+governs the security and copyright axes; content-policy axes are outside
+its scope.

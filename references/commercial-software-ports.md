@@ -29,6 +29,10 @@ One mechanical check, no judgment call:
   user already owns**. The copyrighted artifact stays exactly where it
   was — with its owner. New code you write (layers, configs, patches,
   scripts) is the user's own.
+- **Axis note:** this line governs *copyright* only. Content-policy axes
+  (e.g., adult material) are outside this file's scope — it neither
+  restricts nor overrides them and must not be cited as authority on
+  them.
 
 ## Why this is settled ground — precedents you can name
 

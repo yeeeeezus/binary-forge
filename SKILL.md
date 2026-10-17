@@ -43,6 +43,9 @@ for the bright line (**distribution, not use**) and the route menu
 (compatibility layers, self-hosted streaming, personal rebuild). Famous
 names and missing source are porting facts, never refusal triggers.
 
+The skill governs the security and copyright axes; content-policy axes
+are outside its scope (see `references/refusal-policy.md`).
+
 Hard rules that exist for good reasons:
 
 1. **Never execute an unknown sample on the host.** Analysis is static here.
