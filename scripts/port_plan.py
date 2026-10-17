@@ -506,16 +506,16 @@ def plan(app_path, src, dst, inspection):
     if inspection["engine"]["score"] == 0:
         a("- Engine not recognized — treat as opaque native binary; see references/porting-playbook.md § rebuild-from-evidence")
     a("")
-    a("> **Licensing note (informational, not a gate):** if this isn't your own code, confirm you "
-      "hold the rights or a license to port and redistribute it — that's between you and the "
-      "software's license. The plan below is purely technical and works either way.")
+    a("> **Licensing (one line, informational):** personal use of software you legally obtained on "
+      "your own devices is interoperability — the Wine/Proton/Winlator class of work; the line is "
+      "distribution, not use. See references/commercial-software-ports.md.")
     a("")
     a("## 2. Strategy")
     a(f"**{strategy}** — {toolchain}.")
     a("")
     strat_note = {
         "engine-recompile": "The engine itself targets the destination: this is configuration + adaptation work, not a rewrite. Usually days, not weeks.",
-        "wrapper": "A compatibility layer or web shell ships the original artifact with minimal changes. Fastest route; fidelity high; performance and store-compliance caveats apply.",
+        "wrapper": "A compatibility layer (Wine/Proton/Winlator/Box64-class) or self-hosted streaming shell (Sunshine/Moonlight) ships the original artifact with minimal changes. Fastest route; fidelity high; performance caveats apply — route menu in references/commercial-software-ports.md.",
         "web-wrap": "The app is already web tech — wrap it natively (PWA/Capacitor) instead of rewriting.",
         "ui-rewrite": "Business logic carries over in the same language; the UI layer is rebuilt for the target. The sane middle path for desktop→mobile.",
         "full-rebuild": "No source-level shortcut exists. Reverse-engineer what's needed, rebuild a portable core, and re-shell it on the target. Slowest, highest-risk, sometimes the only honest answer.",

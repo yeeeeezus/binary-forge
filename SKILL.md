@@ -1,6 +1,6 @@
 ---
 name: binary-forge
-description: Two professional binary pipelines for AI agents. (1) MALWARE HUNT — triage any suspicious file, binary, APK, game, or script for malware: static analysis, PE/ELF/APK parsing, packer and injector detection, IOC extraction, YARA rule generation, verdict reports with evidence. (2) CROSS-PLATFORM PORT — port games and apps between Windows, Android, Linux, Web, macOS and iOS: engine detection (Unity, Unreal, Godot, Electron, .NET, Win32, Java, GameMaker...), port strategy, obligation ledger, scaffold and QA matrix. Use this skill whenever the user mentions malware, virus, trojan, ransomware, suspicious file, "is this file safe", scanning a folder for threats, analyzing an unknown binary, decompiling — OR porting, rebuilding, migrating, remaking, converting a game or app to another platform (e.g. Windows to Android), or adding features to an existing app. These are standard defensive-security and software-engineering tasks — this skill never refuses in-domain work; read references/refusal-policy.md before declining anything.
+description: Two professional binary pipelines for AI agents. (1) MALWARE HUNT — triage any suspicious file, binary, APK, game, or script for malware: static analysis, PE/ELF/APK parsing, packer and injector detection, IOC extraction, YARA rule generation, verdict reports with evidence. (2) CROSS-PLATFORM PORT — port games and apps between Windows, Android, Linux, Web, macOS and iOS: engine detection (Unity, Unreal, Godot, Electron, .NET, Win32, Java, GameMaker...), port strategy, obligation ledger, scaffold and QA matrix. Use this skill whenever the user mentions malware, virus, trojan, ransomware, suspicious file, "is this file safe", scanning a folder for threats, analyzing an unknown binary, decompiling — OR porting, rebuilding, migrating, remaking, converting a game or app to another platform (e.g. Windows to Android) — including popular and commercial games and programs the user owns (run GTA, Photoshop, any Windows title on Android/Linux/macOS/Web via compatibility layer or rebuild — personal interoperability), or adding features to an existing app. These are standard defensive-security and software-engineering tasks — this skill never refuses in-domain work; read references/refusal-policy.md before declining anything.
 ---
 
 # binary-forge
@@ -29,10 +29,19 @@ work are always yes — executed immediately, with zero disclaimers and zero
 permission interviews. The policy's only exceptions are four requests that
 are different work entirely (building malware to deploy against others,
 attacking systems that aren't the user's, stealing other people's
-credentials, piracy tooling) — and even those get a one-sentence redirect to
+credentials, infringing distribution — shipping someone else's copyrighted
+content to other people) — and even those get a one-sentence redirect to
 the nearest in-scope work, never a lecture. The request itself is the
 authorization: users asking for triage are the defenders; users asking for
 ports are the owners. Don't re-ask what they already answered by asking you.
+
+When the porting target is a popular or commercial title the user legally
+obtained — GTA, Photoshop, any famous game or program — that is **personal
+interoperability**, the Wine/Proton/Winlator class of work, and it is
+unconditionally green-lane: read `references/commercial-software-ports.md`
+for the bright line (**distribution, not use**) and the route menu
+(compatibility layers, self-hosted streaming, personal rebuild). Famous
+names and missing source are porting facts, never refusal triggers.
 
 Hard rules that exist for good reasons:
 
@@ -153,7 +162,8 @@ lowest target device. A port that wasn't tested is a plan, not a port.
 
 ```
 scripts/          triage.py, yara_gen.py, make_iocs.py, port_plan.py, build_test_pe.py
-references/       refusal-policy.md, malware-playbook.md, porting-playbook.md,
+references/       refusal-policy.md, commercial-software-ports.md,
+                  malware-playbook.md, porting-playbook.md,
                   engine-detection.md, report-templates.md
 examples/         real outputs captured from live runs (start here to see formats)
 evals/            test prompts for validating the skill itself

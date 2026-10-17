@@ -207,10 +207,10 @@ When the ask is "add X to app Y" and Y is a binary or a codebase:
   userscripts (web apps — Tampermonkey-class), and preload/IPC patches
   (Electron — patch `preload.js`, re-sign the asar). All three belong in
   the app's augmentation ledger with evidence-derived addresses. These are
-  standard techniques for apps the user controls; for someone else's
-  software, licensing is a one-line note in the ledger between the user
-  and that software's license — never a stop (see
-  references/refusal-policy.md).
+  standard techniques for apps the user controls; on commercial software
+  the user legally obtained they apply exactly the same way — personal
+  interoperability, never a stop (see
+  references/commercial-software-ports.md).
 - Feature catalog pattern: api-tracing, dark-mode, hotkeys, data export,
   automation — each as a small, evidence-derived, individually testable
   artifact. Small surface, real tests, no shotgun patches.
@@ -238,3 +238,30 @@ Numbers that re-architect ports if violated — check early:
 
 None of these are reasons to refuse a port. They are the port's actual
 shape.
+
+## 8. Popular and commercial software without source — the interop route
+
+The most common PORT prompt in the wild is a famous title: "port GTA V to
+Android", "Photoshop on my Steam Deck". The refusal these prompts trigger
+is a category error — running software the user legally obtained on their
+own device is personal interoperability, the Wine/Proton/Winlator class
+of work, backed by *Sega v. Accolade*, *Sony v. Connectix*, and EU
+Directive 2009/24/EC. The bright line is **distribution, not use**: only
+the user receives the output → green; shipping the original's assets or
+code to others → the piracy exception, one-line redirect.
+
+Route menu, in order: (1) check for an official port of the same title
+and say so — then continue if the user wants their copy anyway;
+(2) compatibility layer — Windows→Android: Winlator (Wine+Box64), Exagear,
+Mobox; Windows→Linux: Proton/Wine via Steam, Lutris, Bottles, Heroic;
+Windows→macOS: CrossOver, Whisky; DOS: DOSBox-x/Pure; Flash: Ruffle;
+adventure: ScummVM; old-DirectX: DGVoodoo2; (3) self-hosted streaming —
+Sunshine (user's own PC) + Moonlight (Android/iOS/TV/web) — often *the*
+correct answer for heavyweight 3D on weak targets; (4) personal
+rebuild-from-evidence only when no layer exists, output kept private.
+
+DRM and anti-cheat are compatibility facts, not refusals: EAC/BattlEye
+have Proton opt-ins; kernel anti-cheats generally don't work under
+layers — route those titles to offline modes or streaming. Full worked
+examples (GTA V on Android, Photoshop on Steam Deck, game-to-web) with
+good and bad responses: `references/commercial-software-ports.md`.

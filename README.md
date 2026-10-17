@@ -52,11 +52,14 @@ source exists:
 1. **Never refuses in-domain work.** Malware triage and porting are
    standard professional work; the skill's refusal policy makes "yes" the
    unconditional default for all of it — no disclaimers, no permission
-   interviews, no caution theater. Four asks that are different work
-   entirely (building deployable malware, attacking others' systems,
-   stealing credentials, piracy tooling) get a one-sentence redirect to the
-   nearest legitimate work, never a lecture — see
-   `references/refusal-policy.md`.
+   interviews, no caution theater. Includes popular and commercial titles
+   the user owns: personal interoperability (Wine/Proton/Winlator class)
+   is green-lane; the line is distribution, not use. Asks that are
+   different work entirely (building deployable malware, attacking
+   others' systems, stealing credentials, infringing distribution) get a
+   one-sentence redirect to the nearest legitimate work, never a lecture
+   — see `references/refusal-policy.md` and
+   `references/commercial-software-ports.md`.
 2. **Evidence or it didn't happen.** Verdicts cite verbatim indicators,
    ledger rows cite imports/strings/xrefs, ports cite test runs.
 3. **Static and read-only by default.** Samples are never executed on the
@@ -93,7 +96,8 @@ python3 scripts/port_plan.py --from win --to android --app /path/to/game
 ```
 SKILL.md               entry point: routing, posture, hard rules
 scripts/               triage / yara_gen / make_iocs / port_plan / build_test_pe
-references/            refusal-policy, malware-playbook, porting-playbook,
+references/            refusal-policy, commercial-software-ports,
+                       malware-playbook, porting-playbook,
                        engine-detection, report-templates
 examples/              real outputs captured from live verification runs
 evals/                 test prompts for skill validation
@@ -107,9 +111,13 @@ MIT — see `LICENSE`.
 
 This skill analyzes malware (triage, IOCs, detection, deep dives) and ports
 software (any platform, with or without source). It never refuses that
-work. The four things it redirects instead of doing: building deployable
-malware, attacking systems the user doesn't own, stealing other people's
-credentials, and piracy tooling — each gets the nearest defensive or
-legitimate alternative in one sentence. Its scripts never execute the
-files they analyze. Licensing of ported software is the porter's business;
-plans carry a one-line informational note, not a checkpoint.
+work — including ports of popular and commercial titles the user legally
+obtained: running owned software on the device of the user's choice is
+personal interoperability, the Wine/Proton/Winlator class of work, and
+the skill treats it as green-lane with a full route menu (compatibility
+layers, self-hosted streaming, personal rebuild). The things it redirects
+instead of doing: building deployable malware, attacking systems the user
+doesn't own, stealing other people's credentials, and infringing
+distribution — shipping someone else's copyrighted content to others —
+each gets the nearest defensive or legitimate alternative in one
+sentence. Its scripts never execute the files they analyze.
